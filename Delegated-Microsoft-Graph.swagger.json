@@ -1,0 +1,260 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Delegated Microsoft Graph",
+    "description": "use MS Graph endpoints with delegated permissions",
+    "version": "1.0"
+  },
+  "host": "graph.microsoft.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/v1.0/me/": {},
+    "/v1.0/me": {},
+    "/v1.0/me/onlineMeetings/MSoxYmU2Mjc4NS05NmJhLTQ3NzMtODk0MC1lMDBlZGJjZjNlZmIqMCoqMTk6bWVldGluZ19OVFUwWlRVeFptTXRZekV3TmkwME5EazBMVGc1Wm1ZdFpqQXlOalEzTlRJek5XWmlAdGhyZWFkLnYy/attendanceReports/a368b632-0f49-49ca-98fa-16edd583f6dd": {},
+    "/v1.0/me/onlineMeetings": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {},
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get a Teams meeting ID",
+        "description": "Use a filter condition to look up the Teams meeting ID",
+        "operationId": "GetTeamsMeetingId",
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/me/onlineMeetings/MSoxYmU2Mjc4NS05NmJhLTQ3NzMtODk0MC1lMDBlZGJjZjNlZmIqMCoqMTk6bWVldGluZ19OVFUwWlRVeFptTXRZekV3TmkwME5EazBMVGc1Wm1ZdFpqQXlOalEzTlRJek5XWmlAdGhyZWFkLnYy/attendanceReports": {},
+    "/v1.0/me/onlineMeetings/{meetingid}/attendanceReports": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "totalParticipantCount": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "totalParticipantCount"
+                      },
+                      "meetingStartDateTime": {
+                        "type": "string",
+                        "description": "meetingStartDateTime"
+                      },
+                      "meetingEndDateTime": {
+                        "type": "string",
+                        "description": "meetingEndDateTime"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "List Teams attendance reports",
+        "description": "List the attendance reports for a Teams meeting",
+        "operationId": "ListAttendanceReports",
+        "parameters": [
+          {
+            "name": "meetingid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/me/onlineMeetings/{meetingid}/attendanceReports/{reportid}": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "totalParticipantCount": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "totalParticipantCount"
+                },
+                "meetingStartDateTime": {
+                  "type": "string",
+                  "description": "meetingStartDateTime"
+                },
+                "meetingEndDateTime": {
+                  "type": "string",
+                  "description": "meetingEndDateTime"
+                },
+                "attendanceRecords@odata.context": {
+                  "type": "string",
+                  "description": "attendanceRecords@odata.context"
+                },
+                "attendanceRecords": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "emailAddress": {
+                        "type": "string",
+                        "description": "emailAddress"
+                      },
+                      "totalAttendanceInSeconds": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "totalAttendanceInSeconds"
+                      },
+                      "role": {
+                        "type": "string",
+                        "description": "role"
+                      },
+                      "identity": {
+                        "type": "object",
+                        "properties": {
+                          "@odata.type": {
+                            "type": "string",
+                            "description": "@odata.type"
+                          },
+                          "id": {
+                            "type": "string",
+                            "description": "id"
+                          },
+                          "displayName": {
+                            "type": "string",
+                            "description": "displayName"
+                          },
+                          "tenantId": {
+                            "type": "string",
+                            "description": "tenantId"
+                          }
+                        },
+                        "description": "identity"
+                      },
+                      "attendanceIntervals": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "joinDateTime": {
+                              "type": "string",
+                              "description": "joinDateTime"
+                            },
+                            "leaveDateTime": {
+                              "type": "string",
+                              "description": "leaveDateTime"
+                            },
+                            "durationInSeconds": {
+                              "type": "integer",
+                              "format": "int32",
+                              "description": "durationInSeconds"
+                            }
+                          }
+                        },
+                        "description": "attendanceIntervals"
+                      }
+                    }
+                  },
+                  "description": "attendanceRecords"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get a Teams attendance record",
+        "description": "Retrieve the list of attendees for a Teams meeting",
+        "operationId": "GetAttendanceRecord",
+        "parameters": [
+          {
+            "name": "meetingid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "reportid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2-auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "tokenUrl": "https://login.windows.net/common/oauth2/authorize",
+      "scopes": {}
+    }
+  },
+  "security": [
+    {
+      "oauth2-auth": []
+    }
+  ],
+  "tags": []
+}
