@@ -237,6 +237,84 @@
           }
         ]
       }
+    },
+    "/v1.0/solutions/bookingBusinesses/{bookingsid}@Victor12.onmicrosoft.com/customers": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.type": {
+                        "type": "string",
+                        "description": "@odata.type"
+                      },
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "displayName": {
+                        "type": "string",
+                        "description": "displayName"
+                      },
+                      "emailAddress": {
+                        "type": "string",
+                        "description": "emailAddress"
+                      },
+                      "createdDateTime": {
+                        "type": "string",
+                        "description": "createdDateTime"
+                      },
+                      "lastUpdatedDateTime": {
+                        "type": "string",
+                        "description": "lastUpdatedDateTime"
+                      },
+                      "addresses": {
+                        "type": "array",
+                        "items": {},
+                        "description": "addresses"
+                      },
+                      "phones": {
+                        "type": "array",
+                        "items": {},
+                        "description": "phones"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get a Bookings customer list",
+        "operationId": "GetBookingsCustomerList",
+        "description": "get the list of customers for a Bookings account",
+        "parameters": [
+          {
+            "name": "bookingsid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          }
+        ]
+      }
     }
   },
   "definitions": {},
