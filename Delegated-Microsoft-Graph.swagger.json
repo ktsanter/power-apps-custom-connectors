@@ -3,7 +3,7 @@
   "info": {
     "title": "Delegated Microsoft Graph",
     "description": "use MS Graph endpoints with delegated permissions",
-    "version": "1.0"
+    "version": "1.004"
   },
   "host": "graph.microsoft.com",
   "basePath": "/",
@@ -21,20 +21,7 @@
         "responses": {
           "default": {
             "description": "default",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "@odata.context": {
-                  "type": "string",
-                  "description": "@odata.context"
-                },
-                "value": {
-                  "type": "array",
-                  "items": {},
-                  "description": "value"
-                }
-              }
-            }
+            "schema": {}
           }
         },
         "summary": "Get a Teams meeting ID",
@@ -315,6 +302,488 @@
           }
         ]
       }
+    },
+    "/v1.0/solutions/bookingBusinesses/ELITEProgram1@Victor12.onmicrosoft.com/appointments/AAMkADAwYWRmYzFkLTM1OWItNDliNi05ZmNhLTkzYWVkNDhiNjFhNQBGAAAAAACveNm3YtcgSprlwLBaQub7BwDuw9JbOjCSS6u7BBM8gcDVAAAAAAENAADuw9JbOjCSS6u7BBM8gcDVAAAQT2aNAAA=": {},
+    "/v1.0/solutions/bookingBusinesses/{bookingsid}@Victor12.onmicrosoft.com/appointments/{bookingseventid}": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "selfServiceAppointmentId": {
+                  "type": "string",
+                  "description": "selfServiceAppointmentId"
+                },
+                "additionalInformation": {
+                  "type": "string",
+                  "description": "additionalInformation"
+                },
+                "isLocationOnline": {
+                  "type": "boolean",
+                  "description": "isLocationOnline"
+                },
+                "joinWebUrl": {
+                  "type": "string",
+                  "description": "joinWebUrl"
+                },
+                "customerName": {
+                  "type": "string",
+                  "description": "customerName"
+                },
+                "customerEmailAddress": {
+                  "type": "string",
+                  "description": "customerEmailAddress"
+                },
+                "customerPhone": {
+                  "type": "string",
+                  "description": "customerPhone"
+                },
+                "customerTimeZone": {
+                  "type": "string",
+                  "description": "customerTimeZone"
+                },
+                "customerNotes": {
+                  "type": "string",
+                  "description": "customerNotes"
+                },
+                "serviceId": {
+                  "type": "string",
+                  "description": "serviceId"
+                },
+                "serviceName": {
+                  "type": "string",
+                  "description": "serviceName"
+                },
+                "duration": {
+                  "type": "string",
+                  "description": "duration"
+                },
+                "preBuffer": {
+                  "type": "string",
+                  "description": "preBuffer"
+                },
+                "postBuffer": {
+                  "type": "string",
+                  "description": "postBuffer"
+                },
+                "priceType": {
+                  "type": "string",
+                  "description": "priceType"
+                },
+                "price": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "price"
+                },
+                "serviceNotes": {
+                  "type": "string",
+                  "description": "serviceNotes"
+                },
+                "optOutOfCustomerEmail": {
+                  "type": "boolean",
+                  "description": "optOutOfCustomerEmail"
+                },
+                "staffMemberIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "staffMemberIds"
+                },
+                "smsNotificationsEnabled": {
+                  "type": "boolean",
+                  "description": "smsNotificationsEnabled"
+                },
+                "anonymousJoinWebUrl": {
+                  "type": "string",
+                  "description": "anonymousJoinWebUrl"
+                },
+                "maximumAttendeesCount": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "maximumAttendeesCount"
+                },
+                "filledAttendeesCount": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "filledAttendeesCount"
+                },
+                "createdDateTime": {
+                  "type": "string",
+                  "description": "createdDateTime"
+                },
+                "lastUpdatedDateTime": {
+                  "type": "string",
+                  "description": "lastUpdatedDateTime"
+                },
+                "isCustomerAllowedToManageBooking": {
+                  "type": "boolean",
+                  "description": "isCustomerAllowedToManageBooking"
+                },
+                "appointmentLabel": {
+                  "type": "string",
+                  "description": "appointmentLabel"
+                },
+                "startDateTime": {
+                  "type": "object",
+                  "properties": {
+                    "dateTime": {
+                      "type": "string",
+                      "description": "dateTime"
+                    },
+                    "timeZone": {
+                      "type": "string",
+                      "description": "timeZone"
+                    }
+                  },
+                  "description": "startDateTime"
+                },
+                "endDateTime": {
+                  "type": "object",
+                  "properties": {
+                    "dateTime": {
+                      "type": "string",
+                      "description": "dateTime"
+                    },
+                    "timeZone": {
+                      "type": "string",
+                      "description": "timeZone"
+                    }
+                  },
+                  "description": "endDateTime"
+                },
+                "serviceLocation": {
+                  "type": "object",
+                  "properties": {
+                    "displayName": {
+                      "type": "string",
+                      "description": "displayName"
+                    },
+                    "locationEmailAddress": {
+                      "type": "string",
+                      "description": "locationEmailAddress"
+                    },
+                    "locationUri": {
+                      "type": "string",
+                      "description": "locationUri"
+                    },
+                    "locationType": {
+                      "type": "string",
+                      "description": "locationType"
+                    },
+                    "uniqueId": {
+                      "type": "string",
+                      "description": "uniqueId"
+                    },
+                    "uniqueIdType": {
+                      "type": "string",
+                      "description": "uniqueIdType"
+                    },
+                    "address": {
+                      "type": "object",
+                      "properties": {
+                        "street": {
+                          "type": "string",
+                          "description": "street"
+                        },
+                        "city": {
+                          "type": "string",
+                          "description": "city"
+                        },
+                        "state": {
+                          "type": "string",
+                          "description": "state"
+                        },
+                        "countryOrRegion": {
+                          "type": "string",
+                          "description": "countryOrRegion"
+                        },
+                        "postalCode": {
+                          "type": "string",
+                          "description": "postalCode"
+                        }
+                      },
+                      "description": "address"
+                    },
+                    "coordinates": {
+                      "type": "object",
+                      "properties": {
+                        "altitude": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "altitude"
+                        },
+                        "latitude": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "latitude"
+                        },
+                        "longitude": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "longitude"
+                        },
+                        "accuracy": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "accuracy"
+                        },
+                        "altitudeAccuracy": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "altitudeAccuracy"
+                        }
+                      },
+                      "description": "coordinates"
+                    }
+                  },
+                  "description": "serviceLocation"
+                },
+                "reminders": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "offset": {
+                        "type": "string",
+                        "description": "offset"
+                      },
+                      "recipients": {
+                        "type": "string",
+                        "description": "recipients"
+                      },
+                      "message": {
+                        "type": "string",
+                        "description": "message"
+                      }
+                    }
+                  },
+                  "description": "reminders"
+                },
+                "customers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.type": {
+                        "type": "string",
+                        "description": "@odata.type"
+                      },
+                      "customerId": {
+                        "type": "string",
+                        "description": "customerId"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "name"
+                      },
+                      "emailAddress": {
+                        "type": "string",
+                        "description": "emailAddress"
+                      },
+                      "phone": {
+                        "type": "string",
+                        "description": "phone"
+                      },
+                      "timeZone": {
+                        "type": "string",
+                        "description": "timeZone"
+                      },
+                      "notes": {
+                        "type": "string",
+                        "description": "notes"
+                      },
+                      "location": {
+                        "type": "object",
+                        "properties": {
+                          "displayName": {
+                            "type": "string",
+                            "description": "displayName"
+                          },
+                          "locationEmailAddress": {
+                            "type": "string",
+                            "description": "locationEmailAddress"
+                          },
+                          "locationUri": {
+                            "type": "string",
+                            "description": "locationUri"
+                          },
+                          "locationType": {
+                            "type": "string",
+                            "description": "locationType"
+                          },
+                          "uniqueId": {
+                            "type": "string",
+                            "description": "uniqueId"
+                          },
+                          "uniqueIdType": {
+                            "type": "string",
+                            "description": "uniqueIdType"
+                          },
+                          "address": {
+                            "type": "object",
+                            "properties": {
+                              "street": {
+                                "type": "string",
+                                "description": "street"
+                              },
+                              "city": {
+                                "type": "string",
+                                "description": "city"
+                              },
+                              "state": {
+                                "type": "string",
+                                "description": "state"
+                              },
+                              "countryOrRegion": {
+                                "type": "string",
+                                "description": "countryOrRegion"
+                              },
+                              "postalCode": {
+                                "type": "string",
+                                "description": "postalCode"
+                              }
+                            },
+                            "description": "address"
+                          },
+                          "coordinates": {
+                            "type": "object",
+                            "properties": {
+                              "altitude": {
+                                "type": "integer",
+                                "format": "int32",
+                                "description": "altitude"
+                              },
+                              "latitude": {
+                                "type": "integer",
+                                "format": "int32",
+                                "description": "latitude"
+                              },
+                              "longitude": {
+                                "type": "integer",
+                                "format": "int32",
+                                "description": "longitude"
+                              },
+                              "accuracy": {
+                                "type": "integer",
+                                "format": "int32",
+                                "description": "accuracy"
+                              },
+                              "altitudeAccuracy": {
+                                "type": "integer",
+                                "format": "int32",
+                                "description": "altitudeAccuracy"
+                              }
+                            },
+                            "description": "coordinates"
+                          }
+                        },
+                        "description": "location"
+                      },
+                      "customQuestionAnswers": {
+                        "type": "array",
+                        "items": {},
+                        "description": "customQuestionAnswers"
+                      }
+                    }
+                  },
+                  "description": "customers"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Bookings appointment",
+        "description": "Get information for a Bookings appointment",
+        "operationId": "GetBookingsAppointment",
+        "parameters": [
+          {
+            "name": "bookingsid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "bookingseventid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "patch": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "summary": "Set customers for Bookings appointment",
+        "description": "Set the customer list for an existing Bookings appointment",
+        "operationId": "SetBookingAppointmentCustomers",
+        "parameters": [
+          {
+            "name": "bookingsid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "bookingseventid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.type": {
+                  "type": "string",
+                  "description": "@odata.type"
+                },
+                "customers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.type": {
+                        "type": "string",
+                        "description": "@odata.type"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "name"
+                      },
+                      "emailAddress": {
+                        "type": "string",
+                        "description": "emailAddress"
+                      }
+                    }
+                  },
+                  "description": "customers"
+                }
+              }
+            }
+          }
+        ]
+      }
     }
   },
   "definitions": {},
@@ -324,9 +793,9 @@
     "oauth2-auth": {
       "type": "oauth2",
       "flow": "accessCode",
-      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
       "tokenUrl": "https://login.windows.net/common/oauth2/authorize",
-      "scopes": {}
+      "scopes": {},
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize"
     }
   },
   "security": [
