@@ -1,0 +1,208 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "ELITE Dataverse",
+    "description": "use Dataverse Web API operations with ELITE data tables",
+    "version": "2.1"
+  },
+  "host": "orga69515ec.crm.dynamics.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/api/data/v9.2/{tablesetname}/Microsoft.Dynamics.CRM.CreateMultiple": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "Ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Ids"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Insert rows from array",
+        "description": "Insert each row in an array into a table",
+        "operationId": "InsertMultiple",
+        "parameters": [
+          {
+            "name": "tablesetname",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "OData-MaxVersion",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "OData-Version",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ]
+      }
+    },
+    "/api/data/v9.2/crc60_eliteattendances/Microsoft.Dynamics.CRM.CreateMultiple": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "Ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Ids"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Dummy",
+        "description": "Dummy",
+        "operationId": "Dummy",
+        "parameters": [
+          {
+            "name": "OData-MaxVersion",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "OData-Version",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Targets": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "crc60_districtsnapshot": {
+                        "type": "string",
+                        "description": "crc60_districtsnapshot"
+                      },
+                      "crc60_eventandclient": {
+                        "type": "string",
+                        "description": "crc60_eventandclient"
+                      },
+                      "crc60_regionalofficesnapshot": {
+                        "type": "string",
+                        "description": "crc60_regionalofficesnapshot"
+                      },
+                      "crc60_servicelinesnapshot": {
+                        "type": "string",
+                        "description": "crc60_servicelinesnapshot"
+                      },
+                      "@odata.type": {
+                        "type": "string",
+                        "description": "@odata.type"
+                      }
+                    }
+                  },
+                  "description": "Targets"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2-auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "tokenUrl": "https://login.windows.net/common/oauth2/authorize",
+      "scopes": {},
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize"
+    }
+  },
+  "security": [
+    {
+      "oauth2-auth": []
+    }
+  ],
+  "tags": []
+}
